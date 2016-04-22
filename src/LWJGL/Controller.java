@@ -5,6 +5,8 @@ import java.awt.*;
 
 /**
  * Created by Rene on 21.04.2016.
+ *
+ *
  */
 public class Controller {
     private JFrame frame;
