@@ -41,9 +41,9 @@ public class SubController extends Observable implements ChangeListener {
     }
     private JPanel GetAll(){
     	JPanel panel = new JPanel(new GridLayout(0,1));
-    	for(int i = 0; i< sliders.size(); i++){
-    		panel.add(GetPanel(sliders.get(i).getValue(), sliders.get(i).getKey()));
-    	}
+        for (Pair<FloatSlider, JLabel> slider : sliders) {
+            panel.add(GetPanel(slider.getValue(), slider.getKey()));
+        }
     	return panel;
     }
     private JPanel GetPanel(JLabel label, JSlider slider){
