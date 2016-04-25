@@ -15,7 +15,7 @@ import java.util.Observer;
  * Created by Rene on 20.04.2016.
  */
 
-class SubController extends Observable implements ChangeListener {
+public class SubController extends Observable implements ChangeListener {
     private List<Pair<FloatSlider,JLabel>> sliders;
     private int ID;
 
@@ -25,7 +25,11 @@ class SubController extends Observable implements ChangeListener {
 
     private JPanel frame;
 
-    SubController(int ID, Observer obs) {
+    /**
+     * @param ID
+     * @param obs
+     */
+    public SubController(int ID, Observer obs) {
         this.ID = ID;
         frame = new JPanel();
         frame.setLayout(new GridLayout(1,0));
@@ -40,7 +44,7 @@ class SubController extends Observable implements ChangeListener {
         frame.add(GetAll());
     }
     private JPanel GetAll(){
-    	JPanel panel = new JPanel(new GridLayout(0,1));
+        JPanel panel = new JPanel(new GridLayout(0,1));
         sliders.forEach(x ->panel.add(GetPanel(x.getValue(),x.getKey())));
     	return panel;
     }

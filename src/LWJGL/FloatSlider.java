@@ -6,12 +6,12 @@ import java.util.Hashtable;
 /**
  * Created by Rene on 20.04.2016.
  */
-class FloatSlider<T extends Number> extends JSlider {
+public class FloatSlider<T extends Number> extends JSlider {
     private int genauigkeitsFaktor;
     private T minimumValue;
     private boolean floatslider = true;
     private Slider Name;
-    FloatSlider(T minValue, T maxValue, T Value, int genauigkeit, Slider name) {
+    public FloatSlider(T minValue, T maxValue, T Value, int genauigkeit, Slider name) {
         Name = name;
         minimumValue = minValue;
         if (genauigkeit == 0){
@@ -29,13 +29,13 @@ class FloatSlider<T extends Number> extends JSlider {
         setMaximum(maxValue.intValue());
         setValue(Value.intValue());
     }
-    T getSliderValue(){
+    public T getSliderValue(){
         if (floatslider){
              return (T) new Float(getValue() /(float)genauigkeitsFaktor);
         }
         return (T) new Integer(getValue());
     }
-    void setMinorTickSpacing(T value){
+    public void setMinorTickSpacing(T value){
         if (floatslider){
             setMinorTickSpacing((int)(value.floatValue()*genauigkeitsFaktor));
         }else {
@@ -43,7 +43,7 @@ class FloatSlider<T extends Number> extends JSlider {
         }
         setPaintTicks(true);
     }
-    void setMajorTickSpacing(T value){
+    public void setMajorTickSpacing(T value){
         int countLabel = (int) ((Range()/genauigkeitsFaktor/ value.floatValue()) +1);
         Hashtable<Integer, JLabel> table = new Hashtable<>();
         if (floatslider){
@@ -68,7 +68,7 @@ class FloatSlider<T extends Number> extends JSlider {
         return Math.abs(getMinimum())+ getMaximum();
     }
 
-    Slider getSName() {
+    public Slider getSName() {
         return Name;
     }
 }
