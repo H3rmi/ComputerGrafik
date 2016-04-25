@@ -15,7 +15,7 @@ public class Controller {
         frame.setDefaultCloseOperation(3);
         frame.setLayout(new GridLayout(1,0));
         frame.getContentPane().setPreferredSize(new Dimension(700,530));
-        frame.setLocation(500, 0);
+        frame.setLocation(600, 0);
         frame.pack();
     }
 
