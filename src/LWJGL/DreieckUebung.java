@@ -38,9 +38,9 @@ public class DreieckUebung implements Runnable,Observer {
 	private DreieckData[] punkte;
 
 	public DreieckUebung() {
-		punkt0 = new DreieckData(1.0f,0.0f,0.0f,-0.5f,-0.5f);
-		punkt1 = new DreieckData(0.0f,1.0f,0.0f,-0.7f,0.7f);
-		punkt2 = new DreieckData(0.0f,0.0f,1.0f,0.2f,-0.2f);
+		punkt0 = new DreieckData(1.0f,0.0f,0.0f,-0.5f,-0.5f,0.0f);
+		punkt1 = new DreieckData(0.0f,1.0f,0.0f,-0.7f,0.7f,0.0f);
+		punkt2 = new DreieckData(0.0f,0.0f,1.0f,0.2f,-0.2f,0.0f);
 		punkte = new DreieckData[]{punkt0,punkt1,punkt2};
 	}
 	public DreieckData getPunktData(int i){
@@ -56,7 +56,7 @@ public class DreieckUebung implements Runnable,Observer {
 			initShaders();
 
 			while (glfwWindowShouldClose(window) == GL_FALSE) {
-				initBuffers();
+				//initBuffers();
 				frame();
 				glfwSwapBuffers(window); 
                 glfwPollEvents();
