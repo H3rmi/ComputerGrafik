@@ -38,9 +38,9 @@ public class SubController extends Observable implements ChangeListener {
         DreieckData data = ((DreieckUebung)obs).getPunktData(ID);
         AddSlider(-1.0f,1.0f,1.0f,0.5f,data.y,1,Slider.YPOS);
         AddSlider(-1.0f,1.0f,0.1f,0.5f,data.x,2,Slider.XPOS);
-        AddSlider(0.0f,1.0f,0.1f,0.25f,data.red,2,Slider.RED);
-        AddSlider(0f,255f,25f,50f,data.green * 255,0,Slider.GREEN);
-        AddSlider(0,255,25,50,data.blue * 255,1,Slider.BLUE);
+        AddSlider(0.0f,360,0.1f,0.25f,data.red,0,Slider.RED);
+        AddSlider(0f,360,25f,50f,data.green,0,Slider.XAXIS);
+        AddSlider(0,360,25,50,data.blue,0,Slider.BLUE);
         frame.add(GetAll());
     }
     private JPanel GetAll(){
