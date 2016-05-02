@@ -3,8 +3,8 @@ package LWJGL;
 /**
  * Created by Rene on 21.04.2016.
  */
-public class DreieckData {
-    public DreieckData(float red, float green, float blue, float x, float y, float z) {
+public class VertexData {
+    public VertexData(float red, float green, float blue, float x, float y, float z) {
         this.red = red;
         this.green = green;
         this.blue = blue;

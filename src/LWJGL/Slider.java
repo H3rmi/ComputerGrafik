@@ -6,7 +6,10 @@ package LWJGL;
 public enum Slider{
     RED("Rot:"), GREEN("Grün:"),BLUE("Blau:"),
     XPOS("Position X:"),YPOS("Position Y:"),
-    XAXIS("Rotation X-Achse:");
+    X_AXIS("Rotation X-Achse:"),
+    Y_AXIS("Rotation Y-Achse:"),
+    Z_AXIS("Rotation Z-Achse:"),
+    ;
     private String LabelText;
     Slider(String s) {
         this.LabelText = s;

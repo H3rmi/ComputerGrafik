@@ -12,8 +12,6 @@ public class Main
 		Controller master = new Controller();
 		DreieckUebung dreieck = new DreieckUebung();
 		master.addSubController(new SubController(0,dreieck).getFrame());
-		master.addSubController(new SubController(1,dreieck).getFrame());
-		master.addSubController(new SubController(2,dreieck).getFrame());
 		master.SetVisible();
 		dreieck.run();
 	}

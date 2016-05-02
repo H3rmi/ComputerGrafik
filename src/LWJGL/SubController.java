@@ -35,12 +35,12 @@ public class SubController extends Observable implements ChangeListener {
         frame.setLayout(new GridLayout(1,0));
         sliders = new ArrayList<>();
         addObserver(obs);
-        DreieckData data = ((DreieckUebung)obs).getPunktData(ID);
-        AddSlider(-1.0f,1.0f,1.0f,0.5f,data.y,1,Slider.YPOS);
-        AddSlider(-1.0f,1.0f,0.1f,0.5f,data.x,2,Slider.XPOS);
-        AddSlider(0.0f,360,0.1f,0.25f,data.red,0,Slider.RED);
-        AddSlider(0f,360,25f,50f,data.green,0,Slider.XAXIS);
-        AddSlider(0,360,25,50,data.blue,0,Slider.BLUE);
+       // VertexData data = ((DreieckUebung)obs).getPunktData(ID);
+        AddSlider(-1.0f,1.0f,1.0f,0.5f,0,1,Slider.YPOS);
+        AddSlider(-1.0f,1.0f,0.1f,0.5f,0,2,Slider.XPOS);
+        AddSlider(0.0f,360,0.1f,0.25f,0,0,Slider.Z_AXIS);
+        AddSlider(0f,360,25f,50f,0,0,Slider.X_AXIS);
+        AddSlider(0,360,25,50,0,0,Slider.Y_AXIS);
         frame.add(GetAll());
     }
     private JPanel GetAll(){
