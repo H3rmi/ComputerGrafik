@@ -52,7 +52,7 @@ public class DreieckUebung implements Runnable,Observer {
 
 	public DreieckUebung() {
 		tetraeder = new Tetraeder();
-		tetraeder.setPosition(0,0,-3.0f);
+		tetraeder.setPosition(0,0,-3f);
 		rotMat = new Matrix4f().identity();
 		modelMat = new Matrix4f();
 		uniforms = new HashMap<>();
