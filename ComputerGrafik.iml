@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://E:/Programme/lwjgl/jar/lwjgl.jar!/" />
+          <root url="jar://C:/Program Files (x86)/lwjgl/jar/lwjgl.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
